@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Regular -->
+  <DamageDef ParentName="Bomb" Name="BEWH_VotannBoltRoundBase">
+    <defName>BEWH_Damage_IronRound</defName>
+    <label>bolt explosion</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} was torn apart by the Iron Round bolt.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>26</defaultDamage>
+    <defaultStoppingPower>0.7</defaultStoppingPower>
+    <defaultArmorPenetration>0.10</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+    <plantDamageFactor>4</plantDamageFactor>
+    <corpseDamageFactor>0.03</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <soundExplosion>GunShotA</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+
+  <!-- Tar  -->
+  <DamageDef>
+    <defName>BEWH_Damage_Tar</defName>
+    <label>blacktar explosion</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} succumbed to Targenic shock.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <additionalHediffs>
+      <li>
+        <hediff>BEWH_Hediff_Tar</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <!-- <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside> -->
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>0.3</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>3</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>1</buildingDamageFactorPassable>
+    <plantDamageFactor>5</plantDamageFactor>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>3</minDamageToFragment>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <explosionColorCenter>(0, 243, 254)</explosionColorCenter>
+    <explosionColorEdge>(0, 190, 255)</explosionColorEdge>
+    <!-- <soundExplosion>BEWH_SFX_PlasmaHit</soundExplosion> --> <!-- add suitable sfx -->
+    <expolosionPropagationSpeed>0.25</expolosionPropagationSpeed>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <corpseDamageFactor>0.1</corpseDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <!-- <combatLogRules>...</combatLogRules> -->
+  </DamageDef>
+
+  <HediffDef>
+    <defName>BEWH_Hediff_Tar</defName>
+    <label>blacktar bolt</label>
+    <description>Is covered in a vicious, highly flammable blacktar compound, that binds limbs and seizes mechanical joints.</description>
+
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>270</disappearsAfterTicks> <!-- ~4.5 sec -->
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter>BEWH_TarEffecter</stateEffecter>
+      </li>
+    </comps>
+
+    <stages>
+      <li>
+        <label>Smeared</label>
+        <minSeverity>0.0</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <AimingDelayFactor>1.15</AimingDelayFactor>
+          <MeleeCooldownFactor>1.10</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <Flammability>0.1</Flammability>
+        </statOffsets>
+      </li>
+
+      <li>
+        <label>Coated</label>
+        <minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.27</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <AimingDelayFactor>1.33</AimingDelayFactor>
+          <MeleeCooldownFactor>1.24</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <Flammability>0.2</Flammability>
+        </statOffsets>
+      </li>
+
+      <li>
+        <label>Soaked</label>
+        <minSeverity>0.8</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <AimingDelayFactor>1.40</AimingDelayFactor>
+          <MeleeCooldownFactor>1.45</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+          <Flammability>0.3</Flammability>
+        </statOffsets>
+      </li>
+    </stages>
+
+    <defaultLabelColor>(0.65,0.40,0.15)</defaultLabelColor>
+  </HediffDef>
+
+  <EffecterDef>
+    <defName>BEWH_TarEffecter</defName>
+    <maintainTicks>270</maintainTicks> <!-- to match the hediff duration -->
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>FuelSpray</fleckDef>
+        <burstCount>10~10</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>.75</positionRadius>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <scale>0.5~0.75</scale>
+        <angle>0~360</angle>
+        <fleckUsesAngleForVelocity>True</fleckUsesAngleForVelocity>
+        <absoluteAngle>true</absoluteAngle>
+        <rotationRate>30~30</rotationRate>
+        <rotation>0</rotation>
+        <speed>0</speed>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <!-- Moltencore Bolt -->
+  <DamageDef ParentName="BEWH_VotannBoltRoundBase">
+    <defName>BEWH_Damage_Moltencore</defName>
+    <label>molten core bolt explosion</label>
+    <deathMessage>{0} met their end in molten rock.</deathMessage>
+    <additionalHediffs>
+      <li>
+        <hediff>BEWH_Hediff_MoltencoreOverheat</hediff>
+        <severityPerDamageDealt>0.010</severityPerDamageDealt>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <armorCategory>Heat</armorCategory>
+    <defaultDamage>21</defaultDamage>
+    <igniteChanceByTargetFlammability>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1, 2)</li>
+      </points>
+    </igniteChanceByTargetFlammability>
+    <igniteCellChance>1</igniteCellChance>
+    <explosionCellFleck>PlainFlash</explosionCellFleck>
+  </DamageDef>
+
+  <HediffDef>
+    <defName>BEWH_Hediff_MoltencoreOverheat</defName>
+    <label>overheat</label>
+    <description>Extreme thermal exposure from the Moltencore bolt progressively softens and melts the target's armor, drastically reducing its ability to withstand incoming attacks.</description>
+
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>480</disappearsAfterTicks> <!-- 8 sec -->
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+    </comps>
+
+    <stages>
+      <li>
+        <label>Heated armor</label>
+        <minSeverity>0.0</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.05</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+
+      <li>
+        <label>Overheated armor</label>
+        <minSeverity>0.5</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+
+      <li>
+        <label>Melting armor</label>
+        <minSeverity>1.0</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.25</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+
+    <defaultLabelColor>(0.78,0.32,0.11)</defaultLabelColor>
+  </HediffDef>
+
+</Defs>

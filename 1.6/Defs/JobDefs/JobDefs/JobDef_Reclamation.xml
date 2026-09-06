@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>BEWH_KinBreach</defName>
+    <driverClass>Votann40k.JobDriver_KinBreach</driverClass>
+    <reportString>breaching TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>BEWH_KinEnterTunnel</defName>
+    <driverClass>Votann40k.JobDriver_KinEnterTunnel</driverClass>
+    <reportString>returning underground.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>

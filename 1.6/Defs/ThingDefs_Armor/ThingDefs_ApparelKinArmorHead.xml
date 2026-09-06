@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ===== Votann ===== -->
+    <!-- Void Armor Helmet -->
+    <ThingDef ParentName="BEWH_KinArmorHelmetBase">
+        <defName>BEWH_Helmet_VoidArmor</defName>
+        <label>Void Armor Helmet</label>
+        <description>[Placeholder]</description>
+        <recipeMaker>
+            <!-- <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite> -->
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/BEWH_KinVoidHelmet</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>26250</WorkToMake>
+            <MarketValue>2500</MarketValue>
+
+            <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+
+            <Insulation_Cold>6</Insulation_Cold>
+            <Insulation_Heat>4</Insulation_Heat>
+
+        </statBases>
+        <equippedStatOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.67</VacuumResistance>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>1</ComponentSpacer>
+            <Plasteel>50</Plasteel>
+        </costList>
+        <apparel>
+            <wornGraphicPath>Things/Armor/BEWH_KinVoidHelmet</wornGraphicPath>
+            <tags>
+                <li>BEWH_Helmet_VoidArmor</li>
+            </tags>
+        </apparel>
+       
+    </ThingDef>
+
+</Defs>

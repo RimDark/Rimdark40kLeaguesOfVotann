@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Ancestor Core -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_AncestorCore</defName>
+    <label>Fane</label>
+    <description>[Placeholder]Unlocks the ability to construct your own Fane.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <baseCost>3000</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Fane</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]You now have the technology to create Ancestor Cores. Each pawn with the "Cloneskein" gene can be uploaded into the Ancestor Core, giving Global Learning factor to all other pawns with the "Cloneskein" gene. Additionally crucibles can be linked to the core, allowing for "Kin" to be gestated.</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Votann Tier 0 -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_VotannTech_Tier_0</defName>
+    <label>Basic Votann technology</label>
+    <description>[Placeholder]Requires Dormant Core.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>BEWH_AncestorCore</li>
+    </prerequisites>
+    <baseCost>100</baseCost>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Basic Votann Technology</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]Tier0 tech unlocked</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Votann Tier 1 -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_VotannTech_Tier_1</defName>
+    <label>Standard Votann technology</label>
+    <description>[Placeholder]Requires Stiring Core.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>BEWH_VotannTech_Tier_0</li>
+    </prerequisites>
+    <baseCost>100</baseCost>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Standard Votann Technology</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]Tier1 tech unlocked</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Votann Tier 2 -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_VotannTech_Tier_2</defName>
+    <label>Advanced Votann technology</label>
+    <description>[Placeholder]Requires Awakening Core.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>BEWH_VotannTech_Tier_1</li>
+    </prerequisites>
+    <baseCost>100</baseCost>
+    <researchViewX>4</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Advanced Votann Technology</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]Tier2 tech unlocked</discoveredLetterText>
+  </ResearchProjectDef>
+  
+  <!-- Votann Tier 3 -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_VotannTech_Tier_3</defName>
+    <label>Superior Votann technology</label>
+    <description>[Placeholder]Requires Awakened Core.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>BEWH_VotannTech_Tier_2</li>
+    </prerequisites>
+    <baseCost>100</baseCost>
+    <researchViewX>5</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Superior Votann Technology</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]Tier3 tech unlocked</discoveredLetterText>
+  </ResearchProjectDef>
+
+  <!-- Votann Tier 4 -->
+  <ResearchProjectDef ParentName="BEWH_VotannResearchBase">
+    <defName>BEWH_VotannTech_Tier_4</defName>
+    <label>Apex Votann technology</label>
+    <description>[Placeholder]Requires Votann.</description>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>BEWH_VotannTech_Tier_3</li>
+    </prerequisites>
+    <baseCost>100</baseCost>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4</researchViewY>
+    <discoveredLetterTitle>About: Apex Votann Technology</discoveredLetterTitle>
+    <discoveredLetterText>[Placeholder]Tier4 tech unlocked</discoveredLetterText>
+  </ResearchProjectDef>
+
+</Defs>

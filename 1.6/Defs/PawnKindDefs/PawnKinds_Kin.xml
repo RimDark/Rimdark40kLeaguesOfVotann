@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Kin reclamation party: mercenary loadouts, biocoded weapons, death acidifiers -->
+  <PawnKindDef ParentName="MercenaryGunnerBase">
+    <defName>BEWH_KinReclaimer_Gunner</defName>
+    <label>kin reclaimer</label>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySniperBase">
+    <defName>BEWH_KinReclaimer_Sniper</defName>
+    <label>kin reclaimer marksman</label>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryHeavyBase">
+    <defName>BEWH_KinReclaimer_Heavy</defName>
+    <label>kin reclaimer heavy</label>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteBase">
+    <defName>BEWH_KinReclaimer_Elite</defName>
+    <label>kin reclaimer veteran</label>
+    <biocodeWeaponChance>1</biocodeWeaponChance>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <initialResistanceRange>12~20</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

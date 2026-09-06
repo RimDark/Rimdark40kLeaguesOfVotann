@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Kin: Cloneskein -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskein</defName>
+        <label>cloneskein</label>
+        <description>Carriers are grown from a cloneskein template rather than born. They can be gestated in a crucible linked to an ancestor core, gain a random cloneskein mutation, and on death their mind can be uploaded to an ancestor core to share what they learned with all living kin.</description>
+        <iconPath>UI/Genes/Kin/BEWH_Cloneskein</iconPath>
+        <biostatCpx>4</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <displayOrderInCategory>41</displayOrderInCategory>
+        <geneClass>Votann40k.Gene_Cloneskein</geneClass>
+        <customEffectDescriptions>
+            <li>Can be grown from a Crucible connected to an Ancestor Core.</li>
+            <li>Can be uploaded to an Ancestor Core upon death, giving learning bonus to all living Kin.</li>
+            <li>Will have a random Cloneskein mutation.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>Psyker</li>
+            <li>Pariah</li>
+        </exclusionTags>
+        <biologicalAgeTickFactorFromAgeCurve>
+            <points>
+                <li>(0, 10)</li>
+                <li>(18, 1)</li>
+            </points>
+        </biologicalAgeTickFactorFromAgeCurve>
+    </GeneDef>
+
+    <!-- Kin: Grudgy -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinGrudgy</defName>
+        <label>grudgy</label>
+        <description>Carriers do not forget a slight. Negative memories of social interactions last twice as long.</description>
+        <iconPath>UI/Genes/Kin/BEWH_Grudgy</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>1</biostatMet>
+        <displayOrderInCategory>41</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Negative social interaction memories last twice as long.</li>
+        </customEffectDescriptions>
+    </GeneDef>
+
+    <!-- Kin: Technical Affinity -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinTechnicalAffinity</defName>
+        <label>technical affinity</label>
+        <description>Carriers have an innate feel for machinery and construction, working faster with mechanoids, hacking, piloting and building, and picking up crafting and intellectual skills more easily.</description>
+        <iconPath>UI/Genes/Kin/BEWH_TechnicalAffinity</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>42</displayOrderInCategory>
+        <statOffsets>
+            <HackingSpeed>0.1</HackingSpeed>
+            <HackingStealth>10</HackingStealth>
+            <ConstructionSpeedFactor>0.05</ConstructionSpeedFactor>
+            <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.2</PilotingAbility>
+            <SubcoreEncodingSpeed>0.2</SubcoreEncodingSpeed>
+            <MechRepairSpeed>0.25</MechRepairSpeed>
+        </statOffsets>
+        <aptitudes>
+            <Crafting>5</Crafting>
+            <Intellectual>3</Intellectual>
+        </aptitudes>
+        <!--<customEffectDescriptions>
+            <li>Allow the creation of Ironkin</li>
+        </customEffectDescriptions>-->
+    </GeneDef>
+
+    <!-- Kin: Clan Loyalty -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinClanLoyalty</defName>
+        <label>clan loyalty</label>
+        <description>Carriers hold a deep loyalty to their kindred. They think better of anyone else with this gene, and far better of family.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>43</displayOrderInCategory>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_ClanLoyalty">
+                <doubledByRelations>
+                    <li>ParentBirth</li>
+                    <li>Parent</li>
+                    <li>Child</li>
+                    <li>Sibling</li>
+                    <li>HalfSibling</li>
+                    <li>Grandparent</li>
+                    <li>Grandchild</li>
+                    <li>NephewOrNiece</li>
+                    <li>UncleOrAunt</li>
+                    <li>Cousin</li>
+                    <li>GreatGrandparent</li>
+                    <li>GranduncleOrGrandaunt</li>
+                    <li>GreatGrandchild</li>
+                    <li>GrandnephewOrGrandniece</li>
+                    <li>CousinOnceRemoved</li>
+                    <li>SecondCousin</li>
+                    <li>Spouse</li>
+                    <li>Fiance</li>
+                    <li>Lover</li>
+                    <li>Stepparent</li>
+                    <li>Stepchild</li>
+                    <li>ParentInLaw</li>
+                    <li>ChildInLaw</li>
+                </doubledByRelations>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Kin: Dense Physique -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinDensePhysique</defName>
+        <label>dense physique</label>
+        <description>Carriers are short, broad and heavy-boned. They are tougher, hit harder in melee and can carry more, but have a smaller frame.</description>
+        <iconPath>UI/Genes/Kin/BEWH_DensePhysique</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>44</displayOrderInCategory>
+        <statOffsets>
+            <VEF_BodySize_Offset>-0.15</VEF_BodySize_Offset>
+
+            <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.20</ArmorRating_Heat>
+            <CarryingCapacity>50</CarryingCapacity>
+            <MeleeDamageFactor>0.2</MeleeDamageFactor>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.3</VacuumResistance>
+        </statOffsets>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>50</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>Physique</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <!-- Kin: Cloneskein Template: Subdermal Layer -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskeinTemplateSubdermalLayer</defName>
+        <label>cloneskein template: subdermal layer</label>
+        <description>A cloneskein mutation that thickens the skin into a dense subdermal layer, improving armor and reducing incoming damage.</description>
+        <iconPath>UI/Genes/Kin/BEWH_SubdermalLayer</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <displayOrderInCategory>45</displayOrderInCategory>
+
+        <passOnDirectly>false</passOnDirectly>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+
+        <statOffsets>
+            <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <ArmorRating_Heat>0.30</ArmorRating_Heat>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+        </statFactors>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_CloneskeinMutation" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Kin: Cloneskein Template: Tunnel Eyes -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskeinTemplateTunnelEyes</defName>
+        <label>cloneskein template: tunnel eyes</label>
+        <description>A cloneskein mutation that adapts the eyes to darkness. Carriers see slightly better and are unaffected by low light.</description>
+        <iconPath>UI/Genes/Kin/BEWH_TunnelEyes</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <displayOrderInCategory>46</displayOrderInCategory>
+
+        <passOnDirectly>false</passOnDirectly>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+
+        <ignoreDarkness>true</ignoreDarkness>
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>0.1</offset>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_CloneskeinMutation" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Kin: Cloneskein Template: Gravborn Sinews -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskeinTemplateGravbornSinews</defName>
+        <label>cloneskein template: gravborn sinews</label>
+        <description>A cloneskein mutation with sinews adapted to high gravity. Carriers can carry more and are a little harder to hit in melee.</description>
+        <iconPath>UI/Genes/Kin/BEWH_GravbornSinews</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <displayOrderInCategory>47</displayOrderInCategory>
+
+        <passOnDirectly>false</passOnDirectly>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+
+        <statOffsets>
+            <CarryingCapacity>50</CarryingCapacity>
+            <MeleeDodgeChance>1</MeleeDodgeChance>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.1</VacuumResistance>
+        </statOffsets>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_CloneskeinMutation" />
+            <li Class="Core40k.DefModExtension_GeneExtension">
+                <addedWorldCarryCapacity>50</addedWorldCarryCapacity>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Kin: Cloneskein Template: Stoneheart -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskeinTemplateStoneheart</defName>
+        <label>cloneskein template: stoneheart</label>
+        <description>A cloneskein mutation that hardens the cardiovascular system. Carriers feel less pain and never suffer heart attacks or artery blockages.</description>
+        <iconPath>UI/Genes/Kin/BEWH_Stoneheart</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <displayOrderInCategory>48</displayOrderInCategory>
+
+        <passOnDirectly>false</passOnDirectly>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+
+        <painFactor>0.85</painFactor>
+        <hediffGiversCannotGive>
+            <li>HeartAttack</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_CloneskeinMutation" />
+        </modExtensions>
+    </GeneDef>
+
+    <!-- Kin: Cloneskein Template: Radvein -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinCloneskeinTemplateRadvein</defName>
+        <label>cloneskein template: radvein</label>
+        <description>A cloneskein mutation that makes the body resistant to toxins and radiation.</description>
+        <iconPath>UI/Genes/Kin/BEWH_Radvein</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <displayOrderInCategory>49</displayOrderInCategory>
+
+        <passOnDirectly>false</passOnDirectly>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+
+        <statOffsets>
+            <ToxicEnvironmentResistance>2</ToxicEnvironmentResistance>
+            <ToxicResistance>2</ToxicResistance>
+        </statOffsets>
+        <modExtensions>
+            <li Class="Votann40k.DefModExtension_CloneskeinMutation" />
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

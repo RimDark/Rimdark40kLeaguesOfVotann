@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <BEWH.Votann.ModSettings.ModName>RimDark 40k - Votann - {0}</BEWH.Votann.ModSettings.ModName>
+    <BEWH.Votann.ModSettings.TabMain>General</BEWH.Votann.ModSettings.TabMain>
+
+    <BEWH.Votann.ModSettings.KinContractMinValue>Minimum value of items that Kin will want to trade: {0}</BEWH.Votann.ModSettings.KinContractMinValue>
+    <BEWH.Votann.ModSettings.KinContractMinValueTooltip>Too low value can cause slow downs when refreshing contracts.</BEWH.Votann.ModSettings.KinContractMinValueTooltip>
+    <BEWH.Votann.ModSettings.KinContractRefreshDays>Days between contract refreshes: {0}</BEWH.Votann.ModSettings.KinContractRefreshDays>
+    <BEWH.Votann.ModSettings.KinContractRefreshDaysTooltip>How long you have to wait before the Kin will offer a new set of contracts.</BEWH.Votann.ModSettings.KinContractRefreshDaysTooltip>
+
+    <!-- Kin -->
+    <BEWH.Votann.Kin.AncestorCore>Ancestor Core</BEWH.Votann.Kin.AncestorCore>
+    <BEWH.Votann.Kin.AncestorCoreSharedKnowledge>Shared Knowledge</BEWH.Votann.Kin.AncestorCoreSharedKnowledge>
+    <BEWH.Votann.Kin.AncestorCoreFuneral>Bury kin</BEWH.Votann.Kin.AncestorCoreFuneral>
+    <BEWH.Votann.Kin.AncestorCoreFuneralDesc>Choose a dead kin to be carried to the Ancestor Core and uploaded.</BEWH.Votann.Kin.AncestorCoreFuneralDesc>
+    <BEWH.Votann.Kin.AncestorCoreNoDeadKin>No dead kin</BEWH.Votann.Kin.AncestorCoreNoDeadKin>
+    <BEWH.Votann.Kin.AncestorCoreCancelFuneral>Cancel upload</BEWH.Votann.Kin.AncestorCoreCancelFuneral>
+    <BEWH.Votann.Kin.AncestorCoreCancelFuneralDesc>Stop hauling {0} to the Ancestor Core.</BEWH.Votann.Kin.AncestorCoreCancelFuneralDesc>
+    <BEWH.Votann.Kin.AncestorCoreStoredKin>Uploaded kin: {0}</BEWH.Votann.Kin.AncestorCoreStoredKin>
+    <BEWH.Votann.Kin.AncestorCorePendingUpload>Awaiting upload: {0}</BEWH.Votann.Kin.AncestorCorePendingUpload>
+    <BEWH.Votann.Kin.AncestorCoreUnpowered>Unpowered: shared knowledge is not being transmitted.</BEWH.Votann.Kin.AncestorCoreUnpowered>
+    <BEWH.Votann.Kin.UploadToAncestorCore>Upload {0} to Ancestor Core</BEWH.Votann.Kin.UploadToAncestorCore>
+    <BEWH.Votann.Kin.CrucibleGrow>Grow Kin</BEWH.Votann.Kin.CrucibleGrow>
+    <BEWH.Votann.Kin.CrucibleGrowDesc>Start the process to grow a new Kin</BEWH.Votann.Kin.CrucibleGrowDesc>
+    <BEWH.Votann.Kin.CrucibleNoAncestorCore>Not linked to an Ancestor Core</BEWH.Votann.Kin.CrucibleNoAncestorCore>
+
+    <!-- Kin Contracts -->
+    <BEWH.Votann.Contract.OpenContracts>Open contracts window</BEWH.Votann.Contract.OpenContracts>
+    <BEWH.Votann.Contract.Title>Kin Contracts</BEWH.Votann.Contract.Title>
+
+    <BEWH.Votann.Contract.RefreshCooldown>Can refresh contracts in: {0}</BEWH.Votann.Contract.RefreshCooldown>
+    <BEWH.Votann.Contract.CanRefresh>Can refresh contracts</BEWH.Votann.Contract.CanRefresh>
+
+    <BEWH.Votann.Contract.Goodwill>Goodwill: {0}</BEWH.Votann.Contract.Goodwill>
+    <BEWH.Votann.Contract.GoodwillTooltip>How much the Kin think of you. Goes from -100 to 100; at -100 they are hostile. Completing contracts and paying tribute raises it, failing contracts lowers it.</BEWH.Votann.Contract.GoodwillTooltip>
+
+    <BEWH.Votann.Contract.PriceMult>Contract trade price multiplier: x{0}</BEWH.Votann.Contract.PriceMult>
+    <BEWH.Votann.Contract.PriceMultTooltip>This is the price multiplier on the things they'll trade you. Over 1 being in your favor and below being in theirs. Scales off goodwill.</BEWH.Votann.Contract.PriceMultTooltip>
+
+    <BEWH.Votann.Contract.MaximumContracts>Maximum contracts: {0}</BEWH.Votann.Contract.MaximumContracts>
+    <BEWH.Votann.Contract.MaximumContractsTooltip>Maximum amount of offered contracts. Scales off goodwill.</BEWH.Votann.Contract.MaximumContractsTooltip>
+
+    <BEWH.Votann.Contract.HostileDebt>The Kin hold a grudge against you. Outstanding debt: {0} silver. Pay tribute to settle it.</BEWH.Votann.Contract.HostileDebt>
+    <BEWH.Votann.Contract.BecameHostile>The Kin have run out of patience with unpaid debts.</BEWH.Votann.Contract.BecameHostile>
+    <BEWH.Votann.Contract.BecameNeutral>The Kin consider the debt settled.</BEWH.Votann.Contract.BecameNeutral>
+
+    <BEWH.Votann.Contract.Status>Status</BEWH.Votann.Contract.Status>
+    <BEWH.Votann.Contract.RequestedItem>Requested Item</BEWH.Votann.Contract.RequestedItem>
+    <BEWH.Votann.Contract.GivenItem>Given Item</BEWH.Votann.Contract.GivenItem>
+    <BEWH.Votann.Contract.ExpiresIn>Time Left</BEWH.Votann.Contract.ExpiresIn>
+
+    <BEWH.Votann.Contract.GivenItemContract>{0} x{1}</BEWH.Votann.Contract.GivenItemContract>
+    <BEWH.Votann.Contract.ExpiresInContract>{0}</BEWH.Votann.Contract.ExpiresInContract>
+
+    <BEWH.Votann.Contract.InfoTitle>{0} x{1} for {2}</BEWH.Votann.Contract.InfoTitle>
+    <BEWH.Votann.Contract.InfoDesc>The Kin want {0}. In return they offer {1} x{2}.\n\nOn acceptance a Kin drill will surface next to the item within a couple of hours, dropping their goods beside it. Your haulers then load the requested item into the drill, which leaves on its own when its time is up. If it leaves empty, the Kin will come to collect.\n\nOffer expires in {3}.</BEWH.Votann.Contract.InfoDesc>
+    <BEWH.Votann.Contract.InfoDrillEnRoute>Accepted. A Kin drill carrying {0} x{1} is tunnelling towards {2} and will surface in {3}.</BEWH.Votann.Contract.InfoDrillEnRoute>
+    <BEWH.Votann.Contract.InfoLoading>The drill has surfaced and is waiting for {0}. Load it and send it, or it leaves on its own in {1}.</BEWH.Votann.Contract.InfoLoading>
+    <BEWH.Votann.Contract.InfoCompleted>Completed. {0} was delivered to the Kin.</BEWH.Votann.Contract.InfoCompleted>
+    <BEWH.Votann.Contract.InfoFailed>Failed. {0} was never delivered; the Kin will collect their due.</BEWH.Votann.Contract.InfoFailed>
+    <BEWH.Votann.Contract.JumpTo>Jump to item</BEWH.Votann.Contract.JumpTo>
+    <BEWH.Votann.Contract.JumpToDrill>Jump to drill</BEWH.Votann.Contract.JumpToDrill>
+    <BEWH.Votann.Contract.Accept>Accept contract</BEWH.Votann.Contract.Accept>
+
+    <BEWH.Votann.Contract.PayTribute>Pay tribute (debt: {0} silver)</BEWH.Votann.Contract.PayTribute>
+    <BEWH.Votann.Contract.PayTributeTooltip>Request a Kin drill and load it with silver to pay off your debt to the Kin. Enough tribute ends hostilities.</BEWH.Votann.Contract.PayTributeTooltip>
+    <BEWH.Votann.Contract.TributePending>Tribute drill on its way</BEWH.Votann.Contract.TributePending>
+    <BEWH.Votann.Contract.TributeDrillRequested>A Kin drill will surface at your trade spot in {0} to collect tribute.</BEWH.Votann.Contract.TributeDrillRequested>
+    <BEWH.Votann.Contract.TributePaid>The Kin accepted {0} silver in tribute. Remaining debt: {1}.</BEWH.Votann.Contract.TributePaid>
+
+    <BEWH.Votann.Contract.AcceptedTitle>Kin contract accepted</BEWH.Votann.Contract.AcceptedTitle>
+    <BEWH.Votann.Contract.AcceptedMessage>The Kin have agreed to trade {1} x{2} for {0}. Their drill will surface near the item in {3}.</BEWH.Votann.Contract.AcceptedMessage>
+    <BEWH.Votann.Contract.CompletedTitle>Kin contract completed</BEWH.Votann.Contract.CompletedTitle>
+    <BEWH.Votann.Contract.CompletedMessage>The Kin drill left with {0}. The Kin are pleased with the exchange.</BEWH.Votann.Contract.CompletedMessage>
+    <BEWH.Votann.Contract.FailedTitle>Kin contract failed</BEWH.Votann.Contract.FailedTitle>
+    <BEWH.Votann.Contract.FailedMessage>The Kin drill left without {0}. The Kin do not forgive a broken bargain: a reclamation party will come for the item and a {1} silver penalty.</BEWH.Votann.Contract.FailedMessage>
+
+    <BEWH.Votann.Contract.StatusDrillEnRoute>Drill in {0}</BEWH.Votann.Contract.StatusDrillEnRoute>
+    <BEWH.Votann.Contract.StatusLoading>Loading ({0})</BEWH.Votann.Contract.StatusLoading>
+    <BEWH.Votann.Contract.StatusCompleted>Completed</BEWH.Votann.Contract.StatusCompleted>
+    <BEWH.Votann.Contract.StatusFailed>Failed</BEWH.Votann.Contract.StatusFailed>
+    <BEWH.Votann.Contract.StatusExpired>Expired</BEWH.Votann.Contract.StatusExpired>
+    <BEWH.Votann.Contract.StatusAvailable>Available</BEWH.Votann.Contract.StatusAvailable>
+
+    <!-- Kin drill -->
+    <BEWH.Votann.Drill.ArrivedTitle>Kin drill surfaced</BEWH.Votann.Drill.ArrivedTitle>
+    <BEWH.Votann.Drill.ArrivedMessage>A Kin drill has surfaced and dropped {0} x{1}. Load {2} into it before it leaves in {3}.</BEWH.Votann.Drill.ArrivedMessage>
+    <BEWH.Votann.Drill.TributeArrived>A Kin drill has surfaced to collect tribute. Load it with silver.</BEWH.Votann.Drill.TributeArrived>
+    <BEWH.Votann.Drill.Send>Send drill</BEWH.Votann.Drill.Send>
+    <BEWH.Votann.Drill.SendDesc>Send the drill back to the Kin with the loaded goods now.</BEWH.Votann.Drill.SendDesc>
+    <BEWH.Votann.Drill.SendTribute>Send tribute</BEWH.Votann.Drill.SendTribute>
+    <BEWH.Votann.Drill.SendTributeDesc>Send the drill back to the Kin with the loaded silver.</BEWH.Votann.Drill.SendTributeDesc>
+    <BEWH.Votann.Drill.NotLoaded>Still needs {0} more</BEWH.Votann.Drill.NotLoaded>
+    <BEWH.Votann.Drill.NoSilverLoaded>No silver loaded</BEWH.Votann.Drill.NoSilverLoaded>
+    <BEWH.Votann.Drill.Unload>Unload</BEWH.Votann.Drill.Unload>
+    <BEWH.Votann.Drill.UnloadDesc>Drop everything loaded into the drill back onto the ground.</BEWH.Votann.Drill.UnloadDesc>
+    <BEWH.Votann.Drill.Departing>Tunnelling away...</BEWH.Votann.Drill.Departing>
+    <BEWH.Votann.Drill.Loaded>Waiting for: {0} ({1}/{2})</BEWH.Votann.Drill.Loaded>
+    <BEWH.Votann.Drill.TributeLoaded>Silver loaded: {0}</BEWH.Votann.Drill.TributeLoaded>
+    <BEWH.Votann.Drill.LeavesIn>Leaves in: {0}</BEWH.Votann.Drill.LeavesIn>
+    <BEWH.Votann.Drill.NothingToLoad>nothing to load</BEWH.Votann.Drill.NothingToLoad>
+
+    <!-- Kin reclamation -->
+    <BEWH.Votann.Reclamation.IncomingTitle>Kin tunnelling in</BEWH.Votann.Reclamation.IncomingTitle>
+    <BEWH.Votann.Reclamation.IncomingMessage>The ground is rumbling. A Kin reclamation party is tunnelling up to collect {0} and a {1} silver penalty. They will not fight unless attacked - but they will go through walls to get what they are owed.</BEWH.Votann.Reclamation.IncomingMessage>
+    <BEWH.Votann.Reclamation.ArrivedTitle>Kin reclamation party</BEWH.Votann.Reclamation.ArrivedTitle>
+    <BEWH.Votann.Reclamation.ArrivedMessage>A Kin reclamation party has climbed out of the ground. They are here for {0} and {1} silver.</BEWH.Votann.Reclamation.ArrivedMessage>
+    <BEWH.Votann.Reclamation.AttackedTitle>Kin reclaimers attacked</BEWH.Votann.Reclamation.AttackedTitle>
+    <BEWH.Votann.Reclamation.AttackedMessage>You attacked the Kin reclamation party. The Kin are now hostile and the party is assaulting your colony.</BEWH.Votann.Reclamation.AttackedMessage>
+    <BEWH.Votann.Reclamation.AttackedReason>Reclamation party attacked</BEWH.Votann.Reclamation.AttackedReason>
+    <BEWH.Votann.Reclamation.ItemMissing>The Kin could not find what they were owed. They are now hostile and will take its value in silver and goods instead.</BEWH.Votann.Reclamation.ItemMissing>
+    <BEWH.Votann.Reclamation.ItemMissingReason>Owed item missing</BEWH.Votann.Reclamation.ItemMissingReason>
+    <BEWH.Votann.Reclamation.Left>The Kin reclamation party has gone back underground with goods worth {0} silver.</BEWH.Votann.Reclamation.Left>
+    <BEWH.Votann.Reclamation.HoleInspect>Kin tunnel. It will seal itself once the reclaimers are gone.</BEWH.Votann.Reclamation.HoleInspect>
+
+    <!-- Placement Limit -->
+    <BEWH.Votann.PlacementLimit.RequiresKin>Requires a colonist with the 'Cloneskein' gene on the map to place.</BEWH.Votann.PlacementLimit.RequiresKin>
+
+</LanguageData>

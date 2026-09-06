@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Kin drill: surfaces for a contract, is loaded by haulers, then tunnels away -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_KinDrill</defName>
+    <label>kin drill</label>
+    <description>A stubby Kin tunnelling drill. It surfaces to exchange goods: the Kin's side of the bargain is dumped beside it, and whatever is loaded into it leaves with it when it departs. Kin property - it cannot be deconstructed.</description>
+    <thingClass>Votann40k.Building_KinDrill</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Production/DeepDrill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.7, 0.5, 1.7)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>400</Mass>
+    </statBases>
+    <building>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isTargetable>false</isTargetable>
+    </building>
+    <drawPlaceWorkersWhileSelected>false</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <!-- Hole left by a Kin reclamation party -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_KinTunnelHole</defName>
+    <label>kin tunnel</label>
+    <description>A hole bored up from below. Whatever came out of it will go back down the same way.</description>
+    <thingClass>Votann40k.Building_KinTunnelHole</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.2</fillPercent>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Natural/CollapsedRocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <building>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <isTargetable>false</isTargetable>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+
+</Defs>

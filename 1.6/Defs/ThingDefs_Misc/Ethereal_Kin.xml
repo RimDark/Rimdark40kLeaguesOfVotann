@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>BEWH_KinDrillSpawner</defName>
+    <label>tunnelling drill</label>
+    <thingClass>Votann40k.KinDrillSpawner</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+      <groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>BEWH_KinTunnelSpawner</defName>
+    <label>tunnelling kin</label>
+    <thingClass>Votann40k.KinTunnelSpawner</thingClass>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <alwaysFlee>true</alwaysFlee>
+    <building>
+      <groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+      <groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+    </building>
+  </ThingDef>
+
+</Defs>
