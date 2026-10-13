@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <RootNamespace>Votann40k</RootNamespace>
+        <AssemblyName>Votann40k</AssemblyName>
+        <OutputType>Library</OutputType>
+        <OutputPath>..\..\Assemblies\</OutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <Optimize>true</Optimize>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>..\..\..\..\..\Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityStubs">
+            <HintPath>..\..\..\..\..\UnityStubs.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Waylith">
+            <HintPath>..\..\..\..\..\Waylith.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="0Harmony">
+            <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Core40k">
+            <HintPath>..\..\..\..\Rimdark40kFramework\1.7\Assemblies\Core40k.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="VEF">
+            <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.IMGUIModule\UnityEngine.IMGUIModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.TextRenderingModule\UnityEngine.TextRenderingModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.InputLegacyModule\UnityEngine.InputLegacyModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.PhysicsModule\UnityEngine.PhysicsModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\UnityForwarders\UnityEngine.TilemapModule\UnityEngine.TilemapModule.csproj">
+            <Private>False</Private>
+        </ProjectReference>
+    </ItemGroup>
+</Project>

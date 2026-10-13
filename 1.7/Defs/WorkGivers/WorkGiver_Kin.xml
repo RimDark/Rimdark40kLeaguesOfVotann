@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>BEWH_HaulToCrucible</defName>
+        <label>carry food to crucible</label>
+        <giverClass>Votann40k.WorkGiver_HaulToCrucible</giverClass>
+        <workType>Hauling</workType>
+        <verb>fill</verb>
+        <gerund>filling</gerund>
+        <priorityInType>109</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>BEWH_HaulCorpseToAncestorCore</defName>
+        <label>upload kin to ancestor core</label>
+        <giverClass>Votann40k.WorkGiver_HaulCorpseToAncestorCore</giverClass>
+        <workType>Hauling</workType>
+        <verb>upload to</verb>
+        <gerund>uploading to</gerund>
+        <priorityInType>110</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>BEWH_HaulToKinDrill</defName>
+        <label>load kin drill</label>
+        <giverClass>Votann40k.WorkGiver_HaulToKinDrill</giverClass>
+        <workType>Hauling</workType>
+        <verb>load</verb>
+        <gerund>loading</gerund>
+        <priorityInType>111</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+</Defs>

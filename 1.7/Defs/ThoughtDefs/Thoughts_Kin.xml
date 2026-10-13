@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>BEWH_KinClanLoyalty</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>Votann40k.ThoughtWorker_ClanLoyalty</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>Clan member</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+            <li>
+                <label>Clan family</label>
+                <baseOpinionOffset>40</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_GrudgeStruckOut</defName>
+        <durationDays>1</durationDays>
+        <stackLimit>5</stackLimit>
+        <stages>
+            <li>
+                <label>grudge struck out</label>
+                <description>I put one of them in the ground myself. The ledger is a line shorter.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_GrudgeStruckOutHeard</defName>
+        <durationDays>0.5</durationDays>
+        <stackLimit>3</stackLimit>
+        <stages>
+            <li>
+                <label>heard a grudge struck out</label>
+                <description>Word came back that another of them is dead. Good.</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

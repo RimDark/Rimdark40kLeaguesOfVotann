@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>BEWH_OffworldKinFaction</defName>
+        <label>Offworld Kin</label>
+        <description>Offworld Kin mining ores from all over the system. They trade through contracts, and settle grudges in person.</description>
+
+        <techLevel>Ultra</techLevel>
+        <rescueesCanJoin>false</rescueesCanJoin>
+        <autoFlee>false</autoFlee>
+
+        <hiddenIdeo>true</hiddenIdeo>
+        <hidden>true</hidden>
+
+        <pawnSingular>Kin</pawnSingular>
+        <pawnsPlural>Kin</pawnsPlural>
+        <fixedName>Offworld Kin</fixedName>
+
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>3000</configurationListOrderPriority>
+        <displayInFactionSelection>false</displayInFactionSelection>
+
+        <canSiege>false</canSiege>
+        <canStageAttacks>false</canStageAttacks>
+        <raidsForbidden>true</raidsForbidden>
+
+        <canGenerateQuestSites>false</canGenerateQuestSites>
+
+        <factionIconPath>UI/Xenotypes/BEWH_Kin_icon</factionIconPath>
+        <settlementTexturePath>UI/Xenotypes/BEWH_Kin_icon</settlementTexturePath>
+
+        <xenotypeSet>
+            <xenotypeChances>
+                <BEWH_Kin>1</BEWH_Kin>
+            </xenotypeChances>
+        </xenotypeSet>
+
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0, 50)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+
+        <!-- Only used for reclamation parties (raidsForbidden keeps them out of normal raids) -->
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <BEWH_KinReclaimer_Gunner>10</BEWH_KinReclaimer_Gunner>
+                    <BEWH_KinReclaimer_Sniper>4</BEWH_KinReclaimer_Sniper>
+                    <BEWH_KinReclaimer_Heavy>3</BEWH_KinReclaimer_Heavy>
+                    <BEWH_KinReclaimer_Elite>3</BEWH_KinReclaimer_Elite>
+                </options>
+            </li>
+            <li>
+                <kindDef>BEWH_KinReclamation</kindDef>
+                <commonality>100</commonality>
+                <options>
+                    <BEWH_KinReclaimer_Gunner>10</BEWH_KinReclaimer_Gunner>
+                    <BEWH_KinReclaimer_Sniper>4</BEWH_KinReclaimer_Sniper>
+                    <BEWH_KinReclaimer_Heavy>3</BEWH_KinReclaimer_Heavy>
+                    <BEWH_KinReclaimer_Elite>3</BEWH_KinReclaimer_Elite>
+                </options>
+            </li>
+        </pawnGroupMakers>
+
+    </FactionDef>
+
+</Defs>

@@ -39,15 +39,17 @@ public class Dialog_Contracts : Window
             currentKinContract = null;
         }
 
-        var titleRect = new Rect(inRect)
+        var headerRect = new Rect(inRect)
         {
-            height = Text.LineHeight * 2f
+            height = Text.LineHeight * 3f
         };
 
-        TitleSpaceWindow(titleRect);
-
         var infoRect = new Rect(inRect);
-        infoRect.yMin += titleRect.height;
+        infoRect.yMin += headerRect.height;
+
+        var kinGrudgeRect = headerRect.TakeBottomPart(Text.LineHeight);
+        TitleSpaceWindow(headerRect);
+        KinGrudgeLine(kinGrudgeRect);
 
         var scrollRect = infoRect.TakeLeftPart(infoRect.width * 0.7f);
         var resetRect = scrollRect.TakeBottomPart(scrollRect.width * 0.1f);
@@ -83,6 +85,23 @@ public class Dialog_Contracts : Window
         Widgets.Label(playerDebtRect, "BEWH.Votann.Contract.Goodwill".Translate(gameComponentKinContracts.CurrentGoodwillByPlayerDebt));
         TooltipHandler.TipRegion(playerDebtRect, "BEWH.Votann.Contract.GoodwillTooltip".Translate());
 
+        Text.Anchor = TextAnchor.UpperLeft;
+        Text.Font = GameFont.Medium;
+    }
+
+    private static void KinGrudgeLine(Rect rect)
+    {
+        var grudges = GameComponent_KinGrudges.Instance;
+        if (grudges?.KinGrudgeFaction == null)
+        {
+            return;
+        }
+
+        rect.xMin += 10f;
+        Text.Font = GameFont.Small;
+        Text.Anchor = TextAnchor.MiddleLeft;
+        Widgets.Label(rect, "BEWH.Votann.Contract.KinGrudge".Translate(grudges.KinGrudgeFaction.Name, grudges.KinGrudgeKills));
+        TooltipHandler.TipRegion(rect, "BEWH.Votann.Contract.KinGrudgeTooltip".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         Text.Font = GameFont.Medium;
     }

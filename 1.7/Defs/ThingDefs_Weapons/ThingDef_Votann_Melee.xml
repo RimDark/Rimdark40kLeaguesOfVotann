@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MeleeWeaponUltratech" Name="BEWH_VotannMeleeBase" Abstract="true">
+    <techLevel>Spacer</techLevel>
+    <relicChance>0</relicChance>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <tradeability>Sellable</tradeability>
+    <tradeTags Inherit="False" />
+    <thingSetMakerTags Inherit="False" />
+    <weaponTags Inherit="False">
+      <li>BEWH_VotannMelee</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+<!-- TIER 0 -->
+
+  <!-- Plasma Knife -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannPlasmaKnife</defName>
+    <label>Plasma Knife</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_0</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.3</Mass>
+      <MaxHitPoints>300</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>35</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <!-- <costStuffCount>35</costStuffCount> -->
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_PlasmaKnife</texPath>
+      <shaderType>Cutout</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.5</drawSize>
+    </graphicData>
+    <uiIconScale>2</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.7</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>12</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>1.6</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>12</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<!-- TIER 1 -->
+
+  <!-- Plasma Sword -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannPlasmaSword</defName>
+    <label>Plasma Sword</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_1</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>28000</WorkToMake>
+      <Mass>5.8</Mass>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_PlasmaSword</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <uiIconScale>1.35</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>23</power>
+        <cooldownTime>1.7</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>12</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>23</power>
+        <cooldownTime>1.6</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>12</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Plasma Axe -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannPlasmaAxe</defName>
+    <label>Plasma Axe</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_1</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>28000</WorkToMake>
+      <Mass>6</Mass>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <Plasteel>35</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_PlasmaAxe</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>1.8</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>12</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<!-- TIER 2 -->
+
+  <!-- Concussion Maul -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannConcussionMaul</defName>
+    <label>Concussion Maul</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_GravitonMaulHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_2</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>11</Mass>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <Plasteel>35</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_ConcussionMaul</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>1.8</cooldownTime>
+        <armorPenetration>1</armorPenetration>
+        <extraMeleeDamages>
+          <li>
+            <def>Stun</def>
+            <amount>16</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<!-- Tier 3 -->
+
+  <!-- Plasma blade gauntlet -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannPlasmaGauntlet</defName>
+    <label>Plasma Blade Gauntlet</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_3</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>36000</WorkToMake>
+      <Mass>7.8</Mass>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Plasteel>45</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_PlasmaBladeGauntlet</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.2</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>15</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.1</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>15</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Heavy plasma axe -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannPlasmaAxe_Heavy</defName>
+    <label>Heavy Plasma Axe</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_3</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>14</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>36000</WorkToMake>
+      <Mass>8.2</Mass>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>7</ComponentIndustrial>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_PlasmaAxe_Heavy</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>33</power>
+        <cooldownTime>2.1</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>15</amount>
+            <chance>0.5</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+<!-- Tier 4 -->
+  <!-- Mass hammer -->
+    <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannMassHammer</defName>
+    <label>Mass Hammer</label>
+    <description>[Placeholder]</description>
+    <!-- <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ThunderhammerHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_4</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>47000</WorkToMake>
+      <Mass>18</Mass>
+    </statBases>
+    <costList>
+      <Steel>55</Steel>
+      <Plasteel>70</Plasteel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_MassHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>42</power>
+        <cooldownTime>3.3</cooldownTime>
+        <armorPenetration>1.15</armorPenetration>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0.2, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0.2, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Darkstar Axe -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannDarkstarAxe</defName>
+    <label>Darkstar Axe</label>
+    <description>[Placeholder]...yada! Has a chance to kill any being instantly... excellent melee characteristics even without this ability... blah.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_DarkstarCrystal</ThingDef>
+    </descriptionHyperlinks>
+    <!-- <soundInteract>BEWH_SFX_ChainswordInteract</soundInteract> -->
+    <!-- <meleeHitSound>BEWH_SFX_ChainswordHit</meleeHitSound> -->
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_4</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>16</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>8.5</Mass>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <Plasteel>50</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+      <BEWH_DarkstarCrystal>10</BEWH_DarkstarCrystal>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_DarkStarAxe</texPath>
+      <!-- <shaderType>BEWH_CutoutThreeColor</shaderType> -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>40</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>1.15</armorPenetration>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.2)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+      <li Class="Core40k.DefModExtension_CriticalHit">
+        <criticalHitChance>0.03</criticalHitChance>        <!-- 3% chance to apply x1000 damage -->
+        <criticalHitDamageMultiplier>1000</criticalHitDamageMultiplier> <!-- This is a workaround based on existing code untill (if) we find some better alternative. It is obviously better to execute the "kill" command but this should do as a placeholder mechanic for now. -->
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Darkstar Glaive -->
+  <ThingDef ParentName="BEWH_VotannMeleeBase">
+    <defName>BEWH_VotannDarkstarGlaive</defName>
+    <label>Darkstar Glaive</label>
+    <description>[Placeholder]...yada! Has a chance to kill any being instantly... excellent melee characteristics even without this ability... blah.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_DarkstarCrystal</ThingDef>
+    </descriptionHyperlinks>
+    <recipeMaker>
+      <researchPrerequisite>BEWH_VotannTech_Tier_4</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>16</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>7.8</Mass>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <Plasteel>48</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+      <BEWH_DarkstarCrystal>10</BEWH_DarkstarCrystal>
+    </costList>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_DarkStarGlaive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>45</power>
+        <cooldownTime>1.65</cooldownTime>
+        <armorPenetration>1.05</armorPenetration>
+      </li>
+      <li>
+        <label>tip</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>33</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>1.2</armorPenetration>
+      </li>
+    </tools>
+    <comps/>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.22)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.17)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(0, 0, -0.22)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.17)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+      <li Class="Core40k.DefModExtension_CriticalHit">
+        <criticalHitChance>0.03</criticalHitChance>        <!-- 3% chance to apply x1000 damage -->
+        <criticalHitDamageMultiplier>1000</criticalHitDamageMultiplier> <!-- This is a workaround based on existing code untill (if) we find some better alternative. It is obviously better to execute the "kill" command but this should do as a placeholder mechanic for now. -->
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

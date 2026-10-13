@@ -66,7 +66,7 @@
         </graphicData>
         <projectile>
             <damageDef>BEWH_Damage_IronRound</damageDef> <!-- placeholder -->
-            <damageAmountBase>37.5</damageAmountBase> <!-- to be tested -->
+            <damageAmountBase>37</damageAmountBase> <!-- to be tested -->
             <stoppingPower>3.5</stoppingPower> <!-- to be tested -->
             <armorPenetrationBase>0.45</armorPenetrationBase> <!-- to be tested -->
             <soundExplode>GunShotA</soundExplode>
@@ -254,7 +254,7 @@
             <drawSize>(0.8, 0.8)</drawSize>
         </graphicData>
         <projectile>
-            <damageDef>Bullet</damageDef>
+            <damageDef>BEWH_Damage_Grudge</damageDef>
             <damageAmountBase>40</damageAmountBase>
             <armorPenetrationBase>0.55</armorPenetrationBase>
             <screenShakeFactor>0.1</screenShakeFactor>
@@ -264,7 +264,9 @@
             <li Class="Core40k.DefModExtension_AmmoChanger">
                 <warmupTime>2</warmupTime> <!-- to be set -->
             </li>
-            <!-- add bodypart selector extension -->
+            <li Class="Votann40k.DefModExtension_GrudgeAmmo">
+                <hitChanceFactor>1.25</hitChanceFactor>
+            </li>
         </modExtensions>
     </ThingDef>
 

@@ -26,7 +26,7 @@ public class Gene_Cloneskein : Gene
     {
         base.PostAdd();
         ChooseMutation();
-        if (chosenGene == null || pawn.genes.HasGene(chosenGene))
+        if (chosenGene == null || pawn.genes.HasActiveGene(chosenGene))
         {
             return;
         }

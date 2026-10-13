@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Regular -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannRegular</defName>
+        <label>Iron Round</label>
+        <description>A standard-issue Votann bolter round. Externally similar to Imperial bolt shells, it incorporates a more efficient propulsion system that delivers higher terminal velocity and greater kinetic impact.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_IronRound</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath> <!-- placeholder or...? -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_IronRound</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.68</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>100</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger" />
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet"> <!-- A copy of the"BEWH_BoltVotannRegular" with a tweak of a range override to be used in a shotgun -->
+        <defName>BEWH_BoltVotannRegular_Shotgun</defName>
+        <label>Iron Round</label>
+        <description>A standard-issue Votann bolter round. Externally similar to Imperial bolt shells, it incorporates a more efficient propulsion system that delivers higher terminal velocity and greater kinetic impact.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_IronRound</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_IronRound</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.68</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>100</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <effectiveRange>35.9</effectiveRange>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Shotgun -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannShotgun</defName>
+        <label>Boltshot Shell</label>
+        <description>The Boltshot Shell contains a cluster of miniature explosive bolts in place of a single projectile. When fired it fills the target area with a spray of multiple detonating impacts. Extremely effective at close range, though its use demands closing the distance with the enemy.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_BoltshotShell</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Shotgun</texPath> <!-- placeholder -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.2, 1.2)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_IronRound</damageDef> <!-- placeholder -->
+            <damageAmountBase>37</damageAmountBase> <!-- to be tested -->
+            <stoppingPower>3.5</stoppingPower> <!-- to be tested -->
+            <armorPenetrationBase>0.45</armorPenetrationBase> <!-- to be tested -->
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>80</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger" />
+        </modExtensions>
+    </ThingDef>
+
+    <!-- EMP -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannEMP</defName>
+        <label>EMP Bolt</label>
+        <description>Specialized ammunition designed to engage mechanical enemies. Disrupts electronic systems and disables shields. Similar in design to Imperial Tempest bolts.</description>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_EMP</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <thingClass>Bullet</thingClass>
+        <projectile>
+            <damageDef>EMP</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <stoppingPower>1</stoppingPower>
+            <armorPenetrationBase>0.58</armorPenetrationBase>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>75</speed>
+            <soundExplode>Explosion_EMP</soundExplode>
+            <explosionRadius>1.1</explosionRadius>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_VotannTech_Tier_1</unlockedBy>
+                <warmupTime>0.5</warmupTime>
+                <shotsPerBurst>1</shotsPerBurst>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Moltencore / Incendiary +armor penalty -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannMoltenCore</defName>
+        <label>Moltencore Bolt</label>
+        <description>Similar in design to the Imperial Inferno Bolt, though its internal mechanism is quite different. When fired, a miniature induction coil activates, instantly heating a reactive compound within a magnetic field. This transforms the payload into a magma-like substance that is released upon impact, overheating the target's armor and dealing major heat damage.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_Moltencore</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_Moltencore</damageDef>
+            <damageAmountBase>18</damageAmountBase>
+            <armorPenetrationBase>0.42</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>100</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_VotannTech_Tier_2</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Tar / Slowdown +flammability -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannTar</defName>
+        <label>Blacktar bolt</label>
+        <description>A specialized ammunition developed by Kin for close-tunnel engagements, where slowing an enemy's advance is a matter of life or death. Rather than relying on mass-reactive detonation, this round coats its target in a viscous, highly flammable compound, disrupting movement by binding limbs and seizing mechanical joints. Commonly paired with incendiary weapons, though used with caution.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_Tar</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_Tar</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <armorPenetrationBase>0.45</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>90</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_VotannTech_Tier_3</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Dark Crystal bolt? -->
+    <!-- <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannDC</defName>
+        <label>Dark Crystal Bolt</label>
+        <description>A bolt tipped with an artificially-grown Darkstar crystal. Though less potent than its naturally occurring counterpart, each hit carries a chance to temporarily disable the target's biological and electro-mechanical systems, leaving it momentarily incapacitated. The crystal's extremely dense molecular structure also makes the projectile an effective penetrator round. Has poor ballistic capabilities and therefore requires more time to aim.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Bolt_Votann_Crystal</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_DarkCrystalBolt</damageDef> 
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.85</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0.2</screenShakeFactor>
+            <speed>100</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <unlockedBy>BEWH_VotannTech_Tier_4</unlockedBy>
+            </li>
+        </modExtensions>
+    </ThingDef> -->
+
+    <!-- Magna Rail Mode: Standard -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannRailgunStandard</defName>
+        <label>Standard Mode</label>
+        <description>Standard firing mode. Magna Rail Rifle fires a magnetically accelerated projectile at extreme velocity. Accuracy depends entirely on the shooter's skill.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Votann_MagnaMode_Manuel</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Needle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <armorPenetrationBase>0.55</armorPenetrationBase>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>110</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger" />
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Magna Rail Mode: Lock-on -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannRailgunLockOn</defName>
+        <label>Lock-on Mode</label>
+        <description>The weapon's onboard AI continuously predicts both target movement and projectile flight, computing a precise firing solution. If the shot is placed in the target's vicinity, it will strike the target's head with perfect accuracy, causing devastating damage.\n\nCalculating the firing solution requires considerable time.</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Votann_MagnaMode_Lock-on</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Needle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <armorPenetrationBase>0.55</armorPenetrationBase>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>110</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <warmupTime>2</warmupTime> <!-- to be set -->
+            </li>
+            <!-- add bodypart selector extension -->
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Magna Rail Mode: "Grudge" --> <!-- We're seriously doing this? lol -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>BEWH_BoltVotannRailgunGrudge</defName>
+        <label>Grudge Mode</label>
+        <description>The result of allowing an exceptionally bitter Kin engineer unrestricted access to the design process. Rather than seeking the quickest kill, the rifle's onboard AI is forced to calculate a perfect targeting solution aimed at the target's crotch. The psychological impact is considered highly satisfactory.\n\n“Some grudges simply deserve a more personal touch.” - Grimnyr Chesekhyr</description>
+        <thingClass>Bullet</thingClass>
+        <uiIconPath>UI/AmmoSwitcher/BEWH_Votann_MagnaMode_Grudge</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectile/Needle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>BEWH_Damage_Grudge</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <armorPenetrationBase>0.55</armorPenetrationBase>
+            <screenShakeFactor>0.1</screenShakeFactor>
+            <speed>110</speed>
+        </projectile>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_AmmoChanger">
+                <warmupTime>2</warmupTime> <!-- to be set -->
+            </li>
+            <li Class="Votann40k.DefModExtension_GrudgeAmmo">
+                <hitChanceFactor>1.25</hitChanceFactor>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Ion weaponry projectiles -->
+    <!-- VVV Beam projectiles if we're doing any VVV -->
+
+</Defs>

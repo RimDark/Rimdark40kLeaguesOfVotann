@@ -39,7 +39,14 @@ public class Building_AncestorCore : Building
                 forceNoIdeo: true, forceDead: true, forcedXenotype: Votann40kDefOf.BEWH_Kin);
             ancestorCorePawn = PawnGenerator.GeneratePawn(request);
             ancestorCorePawn.Name = new NameSingle("BEWH.Votann.Kin.AncestorCore".Translate());
-            Find.WorldPawns.PassToWorld(ancestorCorePawn, PawnDiscardDecideMode.KeepForever);
+            if (Find.WorldPawns.Contains(ancestorCorePawn))
+            {
+                Find.WorldPawns.ForcefullyKeptPawns.Add(ancestorCorePawn);
+            }
+            else
+            {
+                Find.WorldPawns.PassToWorld(ancestorCorePawn, PawnDiscardDecideMode.KeepForever);
+            }
             return ancestorCorePawn;
         }
     }
@@ -84,7 +91,8 @@ public class Building_AncestorCore : Building
             return;
         }
 
-        storedKin++;
+        var fellInGrudge = corpse.InnerPawn?.health?.hediffSet?.HasHediff(Votann40kDefOf.BEWH_FellInGrudge) ?? false;
+        storedKin += fellInGrudge ? 2 : 1;
         Votann40kUtils.MarkBuriedKinDirty();
         corpse.Destroy();
     }

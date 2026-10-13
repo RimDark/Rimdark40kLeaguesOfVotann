@@ -15,4 +15,10 @@
         <reportString>communicating with offworld Kin.</reportString>
     </JobDef>
 
+    <JobDef>
+        <defName>BEWH_OpenGrudgeWindow</defName>
+        <driverClass>Votann40k.JobDriver_OpenGrudgeWindow</driverClass>
+        <reportString>reading the grudges.</reportString>
+    </JobDef>
+
 </Defs>

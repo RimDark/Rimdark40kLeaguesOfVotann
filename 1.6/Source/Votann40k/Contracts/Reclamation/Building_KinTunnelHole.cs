@@ -11,17 +11,6 @@ public class Building_KinTunnelHole : Building
 {
     private const int SealAfterTicks = 120000;
 
-    private int spawnedTick;
-
-    public override void SpawnSetup(Map map, bool respawningAfterLoad)
-    {
-        base.SpawnSetup(map, respawningAfterLoad);
-        if (!respawningAfterLoad)
-        {
-            spawnedTick = Find.TickManager.TicksGame;
-        }
-    }
-
     protected override void Tick()
     {
         base.Tick();

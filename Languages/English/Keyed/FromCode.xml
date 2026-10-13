@@ -24,6 +24,10 @@
     <BEWH.Votann.Kin.CrucibleGrow>Grow Kin</BEWH.Votann.Kin.CrucibleGrow>
     <BEWH.Votann.Kin.CrucibleGrowDesc>Start the process to grow a new Kin</BEWH.Votann.Kin.CrucibleGrowDesc>
     <BEWH.Votann.Kin.CrucibleNoAncestorCore>Not linked to an Ancestor Core</BEWH.Votann.Kin.CrucibleNoAncestorCore>
+    <BEWH.Votann.Kin.CrucibleLeague>League: {0}</BEWH.Votann.Kin.CrucibleLeague>
+    <BEWH.Votann.Kin.CrucibleLeagueDesc>Choose which Kin League the next kin grown in this crucible will belong to. The league decides which league gene the kin is born with. It cannot be changed while a kin is growing.</BEWH.Votann.Kin.CrucibleLeagueDesc>
+    <BEWH.Votann.Kin.CrucibleLeagueLocked>A kin is already being grown; the league is fixed until the cycle ends.</BEWH.Votann.Kin.CrucibleLeagueLocked>
+    <BEWH.Votann.Kin.CrucibleNoLeague>No Kin League available</BEWH.Votann.Kin.CrucibleNoLeague>
 
     <!-- Kin Contracts -->
     <BEWH.Votann.Contract.OpenContracts>Open contracts window</BEWH.Votann.Contract.OpenContracts>
@@ -116,5 +120,93 @@
 
     <!-- Placement Limit -->
     <BEWH.Votann.PlacementLimit.RequiresKin>Requires a colonist with the 'Cloneskein' gene on the map to place.</BEWH.Votann.PlacementLimit.RequiresKin>
+
+    <!-- Kin Grudges -->
+    <BEWH.Votann.Grudge.Title>Grudges</BEWH.Votann.Grudge.Title>
+    <BEWH.Votann.Grudge.Recite>Recite the grudges</BEWH.Votann.Grudge.Recite>
+    <BEWH.Votann.Grudge.OnlyKin>only kin may read the ledger</BEWH.Votann.Grudge.OnlyKin>
+    <BEWH.Votann.Grudge.CannotReach>cannot reach</BEWH.Votann.Grudge.CannotReach>
+
+    <BEWH.Votann.Grudge.TierNone>none</BEWH.Votann.Grudge.TierNone>
+    <BEWH.Votann.Grudge.TierOne>Marked</BEWH.Votann.Grudge.TierOne>
+    <BEWH.Votann.Grudge.TierTwo>Judged</BEWH.Votann.Grudge.TierTwo>
+    <BEWH.Votann.Grudge.TierThree>Doomed</BEWH.Votann.Grudge.TierThree>
+
+    <BEWH.Votann.Grudge.InspectNone>No grudge recorded.</BEWH.Votann.Grudge.InspectNone>
+    <BEWH.Votann.Grudge.InspectCurrent>Grudge: {0} - {1} ({2} struck out)</BEWH.Votann.Grudge.InspectCurrent>
+    <BEWH.Votann.Grudge.InspectReady>The grudge may be reforged.</BEWH.Votann.Grudge.InspectReady>
+    <BEWH.Votann.Grudge.InspectLocked>May be reforged after {0} more kills, or in {1}.</BEWH.Votann.Grudge.InspectLocked>
+
+    <BEWH.Votann.Grudge.HeaderCurrent>Grudge: {0} - {1} ({2} struck out)</BEWH.Votann.Grudge.HeaderCurrent>
+    <BEWH.Votann.Grudge.HeaderNone>No grudge recorded.</BEWH.Votann.Grudge.HeaderNone>
+    <BEWH.Votann.Grudge.HeaderReforgeReady>Reforge: ready</BEWH.Votann.Grudge.HeaderReforgeReady>
+    <BEWH.Votann.Grudge.HeaderReforgeLocked>Reforge: {0} kills or {1}</BEWH.Votann.Grudge.HeaderReforgeLocked>
+    <BEWH.Votann.Grudge.HeaderTooltip>While a grudge stands, every kin deals extra damage to that faction, and kin gain mood for each of them killed. The bonus grows as more of them are struck out.</BEWH.Votann.Grudge.HeaderTooltip>
+    <BEWH.Votann.Grudge.ReforgeTooltip>A grudge cannot be swapped at the stone until enough of them are dead, or enough time has passed. It can still be abandoned in the moment, when they kill one of your kin.</BEWH.Votann.Grudge.ReforgeTooltip>
+
+    <BEWH.Votann.Grudge.ColFaction>Faction</BEWH.Votann.Grudge.ColFaction>
+    <BEWH.Votann.Grudge.ColRelation>Relation</BEWH.Votann.Grudge.ColRelation>
+    <BEWH.Votann.Grudge.ColKills>Struck out</BEWH.Votann.Grudge.ColKills>
+    <BEWH.Votann.Grudge.ColGrudge>Grudge</BEWH.Votann.Grudge.ColGrudge>
+
+    <BEWH.Votann.Grudge.MarkerYours>Yours</BEWH.Votann.Grudge.MarkerYours>
+    <BEWH.Votann.Grudge.MarkerKin>Offworld</BEWH.Votann.Grudge.MarkerKin>
+    <BEWH.Votann.Grudge.MarkerBoth>Both</BEWH.Votann.Grudge.MarkerBoth>
+
+    <BEWH.Votann.Grudge.RelationHostile>Hostile</BEWH.Votann.Grudge.RelationHostile>
+    <BEWH.Votann.Grudge.RelationNeutral>Neutral</BEWH.Votann.Grudge.RelationNeutral>
+    <BEWH.Votann.Grudge.RelationAlly>Ally</BEWH.Votann.Grudge.RelationAlly>
+
+    <BEWH.Votann.Grudge.SelectFaction>Select a faction to read their entry.</BEWH.Votann.Grudge.SelectFaction>
+    <BEWH.Votann.Grudge.Swear>Swear the grudge</BEWH.Votann.Grudge.Swear>
+    <BEWH.Votann.Grudge.SwearDisabledCurrent>This grudge already stands.</BEWH.Votann.Grudge.SwearDisabledCurrent>
+    <BEWH.Votann.Grudge.SwearDisabledLocked>The grudge against {0} must run its course first.</BEWH.Votann.Grudge.SwearDisabledLocked>
+    <BEWH.Votann.Grudge.SwearConfirm>Record a grudge against {0}?\n\nWord will reach them: {1} goodwill. The grudge cannot be swapped again until enough of them are dead or enough time has passed.</BEWH.Votann.Grudge.SwearConfirm>
+
+    <BEWH.Votann.Grudge.InfoLedger>The ledger against {0} runs to {1} names.</BEWH.Votann.Grudge.InfoLedger>
+    <BEWH.Votann.Grudge.InfoTiers>Judgement:\n  Marked - {0} damage from kin\n  Judged - after {1} kills, {2} damage\n  Doomed - after {3} kills, {4} damage</BEWH.Votann.Grudge.InfoTiers>
+    <BEWH.Votann.Grudge.InfoIsCurrent>This grudge stands at {0}, on {1} kills.</BEWH.Votann.Grudge.InfoIsCurrent>
+    <BEWH.Votann.Grudge.InfoCost>Swearing costs {0} goodwill with them. Old scores carry over: this grudge would start on {1} kills.</BEWH.Votann.Grudge.InfoCost>
+    <BEWH.Votann.Grudge.InfoLocked>The grudge against {0} still stands. It may be reforged after {1} more kills, or in {2}.</BEWH.Votann.Grudge.InfoLocked>
+    <BEWH.Votann.Grudge.InfoKinGrudge>The offworld kin have sworn against them too. {0} killed so far.</BEWH.Votann.Grudge.InfoKinGrudge>
+
+    <BEWH.Votann.Grudge.SwornTitle>Grudge recorded</BEWH.Votann.Grudge.SwornTitle>
+    <BEWH.Votann.Grudge.SwornMessage>A grudge is cut into the stone against {0}. Every kin will strike them harder until it is settled.</BEWH.Votann.Grudge.SwornMessage>
+    <BEWH.Votann.Grudge.SwornMessageReplaced>A grudge is cut into the stone against {0}.\n\nThe unfinished grudge against {1} was struck through. The offworld kin note the abandonment: {2} silver added to your debt.</BEWH.Votann.Grudge.SwornMessageReplaced>
+
+    <BEWH.Votann.Grudge.StruckOutTitle>Grudge struck out</BEWH.Votann.Grudge.StruckOutTitle>
+    <BEWH.Votann.Grudge.StruckOutMessage>{0} are gone. The grudge against them is struck out, and the stone stands empty.</BEWH.Votann.Grudge.StruckOutMessage>
+
+    <BEWH.Votann.Grudge.KinGrudgeChanged>The offworld kin have sworn a grudge against {0}.</BEWH.Votann.Grudge.KinGrudgeChanged>
+
+    <BEWH.Votann.Grudge.LetterTitle>A debt of blood</BEWH.Votann.Grudge.LetterTitle>
+    <BEWH.Votann.Grudge.LetterText>{0} was killed by {1}.\n\nRecord a grudge against them? Every kin will deal extra damage to {1}, and word will reach them - at a cost to your standing.</BEWH.Votann.Grudge.LetterText>
+    <BEWH.Votann.Grudge.LetterTextReplace>{0} was killed by {1}.\n\nRecord a grudge against them? The unfinished grudge against {2} would be struck through, and the offworld kin would add {3} silver to your debt for the abandonment.</BEWH.Votann.Grudge.LetterTextReplace>
+    <BEWH.Votann.Grudge.LetterAccept>Record the grudge</BEWH.Votann.Grudge.LetterAccept>
+
+    <BEWH.Votann.Contract.KinGrudge>The Kin have sworn against {0} - settle it and your debt lightens. ({1} struck out)</BEWH.Votann.Contract.KinGrudge>
+    <BEWH.Votann.Contract.KinGrudgeTooltip>The offworld Kin hold their own grudge, and it moves on its own. Every member of that faction your colony kills lowers your debt, more so when the killer is kin, and more again when you hold the same grudge.</BEWH.Votann.Contract.KinGrudgeTooltip>
+
+    <!-- Grudge settings -->
+    <BEWH.Votann.ModSettings.GrudgeHeader>Grudges</BEWH.Votann.ModSettings.GrudgeHeader>
+    <BEWH.Votann.ModSettings.GrudgeTier2Kills>Judged (tier II) at kills: {0}</BEWH.Votann.ModSettings.GrudgeTier2Kills>
+    <BEWH.Votann.ModSettings.GrudgeTier3Kills>Doomed (tier III) at kills: {0}</BEWH.Votann.ModSettings.GrudgeTier3Kills>
+    <BEWH.Votann.ModSettings.GrudgeTier1Factor>Damage from kin at Marked: {0}</BEWH.Votann.ModSettings.GrudgeTier1Factor>
+    <BEWH.Votann.ModSettings.GrudgeTier2Factor>Damage from kin at Judged: {0}</BEWH.Votann.ModSettings.GrudgeTier2Factor>
+    <BEWH.Votann.ModSettings.GrudgeTier3Factor>Damage from kin at Doomed: {0}</BEWH.Votann.ModSettings.GrudgeTier3Factor>
+    <BEWH.Votann.ModSettings.GrudgeReforgeKills>Kills before a grudge may be reforged: {0}</BEWH.Votann.ModSettings.GrudgeReforgeKills>
+    <BEWH.Votann.ModSettings.GrudgeReforgeDays>Days before a grudge may be reforged: {0}</BEWH.Votann.ModSettings.GrudgeReforgeDays>
+    <BEWH.Votann.ModSettings.GrudgeReforgeTooltip>Whichever comes first unlocks the grudgestone.</BEWH.Votann.ModSettings.GrudgeReforgeTooltip>
+    <BEWH.Votann.ModSettings.GrudgeSwearCost>Goodwill lost with a faction when swearing: {0}</BEWH.Votann.ModSettings.GrudgeSwearCost>
+    <BEWH.Votann.ModSettings.GrudgeBreakDebt>Debt for abandoning a fresh grudge: {0}</BEWH.Votann.ModSettings.GrudgeBreakDebt>
+    <BEWH.Votann.ModSettings.GrudgeBreakDebtTooltip>Scales down to nothing as the grudge nears completion.</BEWH.Votann.ModSettings.GrudgeBreakDebtTooltip>
+    <BEWH.Votann.ModSettings.KinGrudgeDebtPerKill>Debt removed per kill on the Kin's grudge: {0}</BEWH.Votann.ModSettings.KinGrudgeDebtPerKill>
+    <BEWH.Votann.ModSettings.KinGrudgeDebtPerKillTooltip>Any of your pawns counts. Goodwill with the offworld Kin is derived from your debt, so this raises it.</BEWH.Votann.ModSettings.KinGrudgeDebtPerKillTooltip>
+    <BEWH.Votann.ModSettings.KinGrudgeKinFactor>Multiplier when the killer is kin: {0}</BEWH.Votann.ModSettings.KinGrudgeKinFactor>
+    <BEWH.Votann.ModSettings.KinGrudgeAlignedFactor>Multiplier when you hold the same grudge: {0}</BEWH.Votann.ModSettings.KinGrudgeAlignedFactor>
+    <BEWH.Votann.ModSettings.KinGrudgeDebtFloor>Lowest debt kills can reach: {0}</BEWH.Votann.ModSettings.KinGrudgeDebtFloor>
+    <BEWH.Votann.ModSettings.KinGrudgeDebtFloorTooltip>Killing stops lowering your debt past this point. Contracts and tribute still do.</BEWH.Votann.ModSettings.KinGrudgeDebtFloorTooltip>
+    <BEWH.Votann.ModSettings.KinGrudgeRerollDays>Days between the Kin picking a new grudge: {0}</BEWH.Votann.ModSettings.KinGrudgeRerollDays>
+    <BEWH.Votann.ModSettings.KinGrudgeRerollTooltip>They also re-pick immediately if their target is defeated or no longer hostile.</BEWH.Votann.ModSettings.KinGrudgeRerollTooltip>
 
 </LanguageData>

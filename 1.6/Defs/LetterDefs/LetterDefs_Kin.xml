@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LetterDef>
+    <defName>BEWH_KinGrudgeOffer</defName>
+    <letterClass>Votann40k.ChoiceLetter_KinGrudge</letterClass>
+    <color>(0.85, 0.55, 0.3)</color>
+    <flashColor>(0.85, 0.55, 0.3)</flashColor>
+    <flashInterval>60</flashInterval>
+    <bounce>true</bounce>
+  </LetterDef>
+
+</Defs>

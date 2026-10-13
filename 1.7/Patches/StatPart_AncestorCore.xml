@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Ancestor Core shared knowledge bonus to Global Learning Factor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName="GlobalLearningFactor"]/parts</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="GlobalLearningFactor"]/parts</xpath>
+            <value>
+                <li Class="Votann40k.StatPart_AncestorCore" />
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="GlobalLearningFactor"]</xpath>
+            <value>
+                <parts>
+                    <li Class="Votann40k.StatPart_AncestorCore" />
+                </parts>
+            </value>
+        </nomatch>
+    </Operation>
+
+</Patch>

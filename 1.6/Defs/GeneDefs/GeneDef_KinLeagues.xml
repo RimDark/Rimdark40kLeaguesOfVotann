@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Kin League: thurian stock -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinLeagueThurian</defName>
+        <label>thurian stock</label>
+        <description>Carriers were grown from Greater Thurian League cloneskein. Generations of deep-core mining have left them faster and more thorough at the rock face.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>50</displayOrderInCategory>
+
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_KinLeague</li>
+        </exclusionTags>
+
+        <statOffsets>
+            <MiningYield>0.15</MiningYield>
+            <MiningSpeed>0.15</MiningSpeed>
+            <DeepDrillingSpeed>0.15</DeepDrillingSpeed>
+        </statOffsets>
+        <aptitudes>
+            <Mining>3</Mining>
+        </aptitudes>
+    </GeneDef>
+
+    <!-- Kin League: trans-hyperian charter -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinLeagueTransHyperian</defName>
+        <label>trans-hyperian charter</label>
+        <description>Carriers were grown from Trans-Hyperian Alliance cloneskein. Bred for the trade lanes, they haggle better, leave a stronger impression and ride faster.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>51</displayOrderInCategory>
+
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_KinLeague</li>
+        </exclusionTags>
+
+        <statOffsets>
+            <TradePriceImprovement>0.08</TradePriceImprovement>
+            <SocialImpact>0.15</SocialImpact>
+            <CaravanRidingSpeedFactor>0.1</CaravanRidingSpeedFactor>
+        </statOffsets>
+        <aptitudes>
+            <Social>3</Social>
+        </aptitudes>
+    </GeneDef>
+
+    <!-- Kin League: kronite discipline -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinLeagueKronus</defName>
+        <label>kronite discipline</label>
+        <description>Carriers were grown from Kronus Hegemony cloneskein. Drilled for war from the crucible, they shoot straighter, aim faster and hit harder in melee.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>52</displayOrderInCategory>
+
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_KinLeague</li>
+        </exclusionTags>
+
+        <statOffsets>
+            <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+            <ShootingAccuracyFactor_Medium>1.1</ShootingAccuracyFactor_Medium>
+            <ShootingAccuracyFactor_Long>1.1</ShootingAccuracyFactor_Long>
+            <AimingDelayFactor>0.9</AimingDelayFactor>
+        </statFactors>
+        <aptitudes>
+            <Shooting>2</Shooting>
+            <Melee>2</Melee>
+        </aptitudes>
+    </GeneDef>
+
+    <!-- Kin League: ymyr artifice -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinLeagueYmyr</defName>
+        <label>ymyr artifice</label>
+        <description>Carriers were grown from Ymyr Conglomerate cloneskein. Raised among the finest forges of the leagues, they craft and research with an artificer's eye.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>53</displayOrderInCategory>
+
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_KinLeague</li>
+        </exclusionTags>
+
+        <statOffsets>
+            <ResearchSpeed>0.1</ResearchSpeed>
+        </statOffsets>
+        <aptitudes>
+            <Crafting>3</Crafting>
+            <Intellectual>2</Intellectual>
+        </aptitudes>
+    </GeneDef>
+
+    <!-- Kin League: surtr-hardened -->
+    <GeneDef ParentName="BEWH_VotannGenesOverallParent">
+        <defName>BEWH_KinLeagueUraniSurtr</defName>
+        <label>surtr-hardened</label>
+        <description>Carriers were grown from Urani-Surtr Regulates cloneskein. Tempered by a binary star, they tolerate a wider range of temperatures and shrug off toxins.</description>
+        <iconPath>UI/Genes/Kin/BEWH_ClanLoyalty</iconPath>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>54</displayOrderInCategory>
+
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <exclusionTags>
+            <li>BEWH_KinLeague</li>
+        </exclusionTags>
+
+        <statOffsets>
+            <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+            <ComfyTemperatureMax>8</ComfyTemperatureMax>
+            <ToxicResistance>0.25</ToxicResistance>
+        </statOffsets>
+    </GeneDef>
+
+</Defs>

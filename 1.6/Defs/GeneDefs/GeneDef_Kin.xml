@@ -118,7 +118,7 @@
         <biostatMet>-2</biostatMet>
         <displayOrderInCategory>44</displayOrderInCategory>
         <statOffsets>
-            <VEF_BodySize_Offset>-0.15</VEF_BodySize_Offset>
+            <VEF_BodySize_Offset>-0.3</VEF_BodySize_Offset>
 
             <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.05</ArmorRating_Sharp>

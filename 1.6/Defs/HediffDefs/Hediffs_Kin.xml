@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Marks a kin who died to the faction the colony holds a grudge against. Rides along on the corpse. -->
+  <HediffDef>
+    <defName>BEWH_FellInGrudge</defName>
+    <label>fell in grudge</label>
+    <description>This kin died settling a grudge. The ancestor core weighs such a memory twice.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <defaultLabelColor>(0.78,0.64,0.32)</defaultLabelColor>
+  </HediffDef>
+
+  <!-- Gunshot wound with triple pain, used by the magna rail's Grudge mode -->
+  <HediffDef ParentName="InjuryBase">
+    <defName>BEWH_GrudgeGunshot</defName>
+    <label>grudge wound</label>
+    <labelNoun>a grudge wound</labelNoun>
+    <description>A gunshot wound placed for maximum indignity.</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>old grudge wound</permanentLabel>
+        <instantlyPermanentLabel>permanent grudge injury</instantlyPermanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0375</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Shot off</destroyedLabel>
+      <destroyedOutLabel>Shot out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Greater Thurian League -->
+  <Votann40k.KinLeagueDef>
+    <defName>BEWH_GreaterThurianLeague</defName>
+    <label>Greater Thurian League</label>
+    <description>The oldest and largest of the leagues. Its kin are deep-core miners and heavy industrialists, grown for long shifts in the rock.</description>
+    <iconPath>UI/Xenotypes/BEWH_Kin_icon</iconPath>
+    <displayOrder>10</displayOrder>
+    <defaultLeague>true</defaultLeague>
+    <genes>
+      <li>BEWH_KinLeagueThurian</li>
+    </genes>
+  </Votann40k.KinLeagueDef>
+
+  <!-- Trans-Hyperian Alliance -->
+  <Votann40k.KinLeagueDef>
+    <defName>BEWH_TransHyperianAlliance</defName>
+    <label>Trans-Hyperian Alliance</label>
+    <description>A sprawling network of trade holds strung along the hyperspace routes. Its kin are traders and void-farers.</description>
+    <iconPath>UI/Xenotypes/BEWH_Kin_icon</iconPath>
+    <displayOrder>20</displayOrder>
+    <genes>
+      <li>BEWH_KinLeagueTransHyperian</li>
+    </genes>
+  </Votann40k.KinLeagueDef>
+
+  <!-- Kronus Hegemony -->
+  <Votann40k.KinLeagueDef>
+    <defName>BEWH_KronusHegemony</defName>
+    <label>Kronus Hegemony</label>
+    <description>The most militant of the leagues, forward-deployed and hard-edged. Its kin are drilled for war from the crucible.</description>
+    <iconPath>UI/Xenotypes/BEWH_Kin_icon</iconPath>
+    <displayOrder>30</displayOrder>
+    <genes>
+      <li>BEWH_KinLeagueKronus</li>
+    </genes>
+  </Votann40k.KinLeagueDef>
+
+  <!-- Ymyr Conglomerate -->
+  <Votann40k.KinLeagueDef>
+    <defName>BEWH_YmyrConglomerate</defName>
+    <label>Ymyr Conglomerate</label>
+    <description>A league of master artificers whose forges are the envy of the galaxy. Its kin are engineers and smiths.</description>
+    <iconPath>UI/Xenotypes/BEWH_Kin_icon</iconPath>
+    <displayOrder>40</displayOrder>
+    <genes>
+      <li>BEWH_KinLeagueYmyr</li>
+    </genes>
+  </Votann40k.KinLeagueDef>
+
+  <!-- Urani-Surtr Regulates -->
+  <Votann40k.KinLeagueDef>
+    <defName>BEWH_UraniSurtrRegulates</defName>
+    <label>Urani-Surtr Regulates</label>
+    <description>A league born in the furnace glare of a binary star. Its kin are hardened to heat, cold and poison.</description>
+    <iconPath>UI/Xenotypes/BEWH_Kin_icon</iconPath>
+    <displayOrder>50</displayOrder>
+    <genes>
+      <li>BEWH_KinLeagueUraniSurtr</li>
+    </genes>
+  </Votann40k.KinLeagueDef>
+
+</Defs>

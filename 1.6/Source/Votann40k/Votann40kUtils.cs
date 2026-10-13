@@ -58,6 +58,17 @@ public static class Votann40kUtils
         return result;
     }
 
+    public static string JudgementTierLabel(int tier)
+    {
+        return tier switch
+        {
+            3 => "BEWH.Votann.Grudge.TierThree".Translate(),
+            2 => "BEWH.Votann.Grudge.TierTwo".Translate(),
+            1 => "BEWH.Votann.Grudge.TierOne".Translate(),
+            _ => "BEWH.Votann.Grudge.TierNone".Translate()
+        };
+    }
+
     public static bool IsKin(Pawn pawn)
     {
         return pawn?.genes != null && pawn.genes.HasActiveGene(Votann40kDefOf.BEWH_KinCloneskein);

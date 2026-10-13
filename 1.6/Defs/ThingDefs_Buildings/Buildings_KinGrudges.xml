@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Grudgestone: the ledger the colony's kin record their grudges in -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>BEWH_KinGrudgeStone</defName>
+    <label>grudgestone</label>
+    <description>A slab of cut rock bound in brass, on which the colony's kin cut the record of a debt of blood. Only kin may read it. While a grudge stands, every kin strikes harder at those it names, and word of each one struck out lifts the whole hold.</description>
+    <thingClass>Votann40k.Building_GrudgeStone</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <tickerType>Never</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Misc/CommsConsole</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.5, 0.85)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(2,1)</size>
+    <canOverlapZones>false</canOverlapZones>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationCategory>BEWH_RimDarkCategory</designationCategory>
+    <uiOrder>2110</uiOrder>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>BEWH_VotannTech_Tier_0</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+      <li>Core40k.PlaceWorker_OnlyOnePerMap</li>
+      <li>Votann40k.PlaceWorker_OnlyAvailableWithKinInColony</li>
+    </placeWorkers>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+  </ThingDef>
+
+</Defs>

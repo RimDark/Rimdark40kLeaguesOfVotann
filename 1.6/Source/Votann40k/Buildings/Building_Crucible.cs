@@ -14,6 +14,8 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 
 	private StorageSettings allowedNutritionSettings;
 
+	private KinLeagueDef selectedLeague;
+
 	[Unsaved(false)]
 	private CompPowerTrader cachedPowerComp;
 
@@ -109,6 +111,8 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 			return null;
 		}
 	}
+
+	private KinLeagueDef SelectedLeague => selectedLeague ??= KinLeagueUtility.DefaultLeague;
 
 	public float BiostarvationDailyOffset
 	{
@@ -452,7 +456,7 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 		var parent = core.AncestorCorePawn;
 		var request = new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, PawnGenerationContext.NonPlayer,
 			forceGenerateNewPawn: true, allowDowned: true, canGeneratePawnRelations: false, allowAddictions: false,
-			fixedIdeo: Faction.OfPlayer.ideos?.PrimaryIdeo, forcedXenotype: Votann40kDefOf.BEWH_Kin,
+			forcedEndogenes: SelectedLeague?.genes, forcedXenotype: Votann40kDefOf.BEWH_Kin,
 			developmentalStages: DevelopmentalStage.Newborn)
 		{
 			DontGivePreArrivalPathway = true
@@ -476,6 +480,7 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 		{
 			yield return item;
 		}
+		yield return LeagueGizmo();
 		if (Working)
 		{
 			yield return new Command_Action
@@ -531,6 +536,10 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 			{
 				command_Action.Disable("Occupied".Translate());
 			}
+			else if (SelectedLeague == null)
+			{
+				command_Action.Disable("BEWH.Votann.Kin.CrucibleNoLeague".Translate());
+			}
 			yield return command_Action;
 		}
 		if (DebugSettings.ShowDevGizmos)
@@ -552,6 +561,46 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 				}
 			};
 		}
+	}
+
+	/// <summary>
+	/// Gizmo for choosing which Kin League the next kin grown here belongs to. Locked while a kin is in the crucible.
+	/// </summary>
+	private Gizmo LeagueGizmo()
+	{
+		var league = SelectedLeague;
+		var command = new Command_Action
+		{
+			defaultLabel = "BEWH.Votann.Kin.CrucibleLeague".Translate(league != null ? league.LabelCap : "None".Translate()),
+			defaultDesc = "BEWH.Votann.Kin.CrucibleLeagueDesc".Translate(),
+			icon = league != null ? league.Icon : BaseContent.BadTex,
+			action = delegate
+			{
+				var options = new List<FloatMenuOption>();
+				var leagues = KinLeagueUtility.AllLeagues;
+				for (var i = 0; i < leagues.Count; i++)
+				{
+					var option = leagues[i];
+					if (!KinLeagueUtility.Unlocked(option))
+					{
+						continue;
+					}
+					options.Add(new FloatMenuOption(option.LabelCap, delegate
+					{
+						selectedLeague = option;
+					}, option.Icon, Color.white));
+				}
+				if (options.Count > 0)
+				{
+					Find.WindowStack.Add(new FloatMenu(options));
+				}
+			}
+		};
+		if (selectedPawn != null)
+		{
+			command.Disable("BEWH.Votann.Kin.CrucibleLeagueLocked".Translate());
+		}
+		return command;
 	}
 
 	public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
@@ -590,6 +639,10 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 		{
 			stringBuilder.AppendLineIfNotEmpty().Append("WaitingForPawn".Translate(selectedPawn.Named("PAWN")).Resolve());
 		}
+		if (SelectedLeague != null)
+		{
+			stringBuilder.AppendLineIfNotEmpty().Append("BEWH.Votann.Kin.CrucibleLeague".Translate(SelectedLeague.LabelCap));
+		}
 		stringBuilder.AppendLineIfNotEmpty().Append("Nutrition".Translate()).Append(": ").Append(NutritionStored.ToStringByStyle(ToStringStyle.FloatMaxOne));
 		if (Working)
 		{
@@ -602,6 +655,7 @@ public class Building_Crucible  : Building_Enterable, IStoreSettingsParent, IThi
 	{
 		base.ExposeData();
 		Scribe_Values.Look(ref containedNutrition, "containedNutrition", 0f);
+		Scribe_Defs.Look(ref selectedLeague, "selectedLeague");
 		Scribe_Deep.Look(ref allowedNutritionSettings, "allowedNutritionSettings", this);
 		if (allowedNutritionSettings == null)
 		{

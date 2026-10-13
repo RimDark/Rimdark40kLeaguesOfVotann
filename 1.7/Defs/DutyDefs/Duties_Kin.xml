@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <DutyDef>
+    <defName>BEWH_KinReclaim</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="Votann40k.JobGiver_KinReclaim" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+</Defs>

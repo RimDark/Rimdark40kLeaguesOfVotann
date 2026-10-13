@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- ===== Votann ===== -->
+    <!-- Void Armor -->
+    <ThingDef ParentName="BEWH_KinArmorBase">
+        <defName>BEWH_VoidArmor</defName>
+        <label>Void Armor</label>
+        <description>[Placeholder]</description>
+        <recipeMaker>
+            <!-- <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite> -->
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/BEWH_KinVoidArmor</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>75000</WorkToMake>
+            <MarketValue>8000</MarketValue>
+
+            <ArmorRating_Sharp>1.56</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+
+            <Insulation_Cold>36</Insulation_Cold>
+            <Insulation_Heat>20</Insulation_Heat>
+
+        </statBases>
+        <equippedStatOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.28</VacuumResistance>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>6</ComponentSpacer>
+            <Plasteel>150</Plasteel>
+            <Uranium>50</Uranium>
+        </costList>
+        <apparel>
+            <wornGraphicPath>Things/Armor/BEWH_KinVoidArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_VoidArmor</li>
+            </tags>
+        </apparel>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Male</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

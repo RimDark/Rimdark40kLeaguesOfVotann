@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>BEWH_DarkstarCrystal</defName>
+    <label>Darkstar Crystal</label>
+    <description>A secure container holding an incredibly rare and equally dangerous crystal mined from the edges of the Dead Zones at the Galactic Core.\n\nA single careless cut from such a crystal can "shut down" biological or electro-mechanical functions of any being leading to instant death. Wars have been waged over a single such crystal, and many traders are willing to pay very high prices for them.\n\nThis is an essential component in the creation of Darkstar Weapons.</description>
+    <descriptionHyperlinks>
+      <ThingDef>BEWH_VotannDarkstarAxe</ThingDef>
+      <ThingDef>BEWH_VotannDarkstarGlaive</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Resource/Darkstar</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.65</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <smeltable>false</smeltable>
+    <!-- Makes no sense to make it a stuff type -->
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

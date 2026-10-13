@@ -241,4 +241,20 @@
     <defaultLabelColor>(0.78,0.32,0.11)</defaultLabelColor>
   </HediffDef>
 
+  <!-- Grudge Mode: same round, aimed low, hurts far more -->
+  <DamageDef ParentName="Bullet">
+    <defName>BEWH_Damage_Grudge</defName>
+    <label>grudge round</label>
+    <deathMessage>{0} was shot in the crotch, and did not recover from it.</deathMessage>
+    <hediff>BEWH_GrudgeGunshot</hediff>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_TargetBodyParts">
+        <bodyParts>
+          <li>Pelvis</li>
+        </bodyParts>
+        <chance>1</chance>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
 </Defs>

@@ -12,6 +12,7 @@ public static class Votann40kDefOf
     public static JobDef BEWH_OpenContractWindow;
     public static JobDef BEWH_KinBreach;
     public static JobDef BEWH_KinEnterTunnel;
+    public static JobDef BEWH_OpenGrudgeWindow;
 
     //GeneDef
     public static GeneDef BEWH_KinGrudgy;
@@ -25,6 +26,17 @@ public static class Votann40kDefOf
     public static ThingDef BEWH_KinDrillSpawner;
     public static ThingDef BEWH_KinTunnelSpawner;
     public static ThingDef BEWH_KinTunnelHole;
+    public static ThingDef BEWH_KinGrudgeStone;
+
+    //ThoughtDef
+    public static ThoughtDef BEWH_GrudgeStruckOut;
+    public static ThoughtDef BEWH_GrudgeStruckOutHeard;
+
+    //HediffDef
+    public static HediffDef BEWH_FellInGrudge;
+
+    //LetterDef
+    public static LetterDef BEWH_KinGrudgeOffer;
 
     //XenotypeDef
     public static XenotypeDef BEWH_Kin;

@@ -70,6 +70,9 @@
     <ItemGroup>
         <Compile Include="Harmony\HarmonyPatch_BuryKinCorpse.cs" />
         <Compile Include="Harmony\HarmonyPatch_Grudge.cs" />
+        <Compile Include="Harmony\HarmonyPatch_GrudgeAccuracy.cs" />
+        <Compile Include="Harmony\HarmonyPatch_GrudgeDamage.cs" />
+        <Compile Include="Harmony\HarmonyPatch_GrudgeKill.cs" />
         <Compile Include="PlaceWorkers\PlaceWorker_OnlyAvailableWithKinInColony.cs" />
         <Compile Include="StatParts\StatPart_AncestorCore.cs" />
         <Compile Include="Votann40kDefOf.cs" />
@@ -95,7 +98,15 @@
         <Compile Include="Contracts\Reclamation\LordToil_KinReclaim.cs" />
         <Compile Include="DefModExtensions\DefModExtension_ClanLoyalty.cs" />
         <Compile Include="DefModExtensions\DefModExtension_CloneskeinMutation.cs" />
+        <Compile Include="DefModExtensions\DefModExtension_GrudgeAmmo.cs" />
+        <Compile Include="Defs\KinLeagueDef.cs" />
+        <Compile Include="Defs\KinLeagueUtility.cs" />
         <Compile Include="Gene\Gene_Cloneskein.cs" />
+        <Compile Include="Grudges\Building_GrudgeStone.cs" />
+        <Compile Include="Grudges\ChoiceLetter_KinGrudge.cs" />
+        <Compile Include="Grudges\Dialog_Grudges.cs" />
+        <Compile Include="Grudges\GameComponent_KinGrudges.cs" />
+        <Compile Include="Grudges\JobDriver_OpenGrudgeWindow.cs" />
         <Compile Include="ModSettings\ModSettingTab_VotannMain.cs" />
         <Compile Include="Votann40kMod.cs" />
         <Compile Include="Votann40kModSettings.cs" />

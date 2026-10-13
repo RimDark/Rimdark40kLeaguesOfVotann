@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>BEWH_CarryKinToAncestorCore</defName>
+        <driverClass>Votann40k.JobDriver_CarryKinToAncestorCore</driverClass>
+        <reportString>carrying TargetB to TargetA.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+    <JobDef>
+        <defName>BEWH_OpenContractWindow</defName>
+        <driverClass>Votann40k.JobDriver_OpenContractWindow</driverClass>
+        <reportString>communicating with offworld Kin.</reportString>
+    </JobDef>
+
+    <JobDef>
+        <defName>BEWH_OpenGrudgeWindow</defName>
+        <driverClass>Votann40k.JobDriver_OpenGrudgeWindow</driverClass>
+        <reportString>reading the grudges.</reportString>
+    </JobDef>
+
+</Defs>

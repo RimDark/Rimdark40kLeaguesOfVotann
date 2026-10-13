@@ -414,6 +414,20 @@ public class GameComponent_KinContracts : GameComponent
         SyncHostility();
     }
 
+    /// <summary>
+    /// Single entry point for outside systems moving the debt. Positive raises debt, negative lowers it.
+    /// </summary>
+    public void AdjustDebt(float delta)
+    {
+        if (Mathf.Approximately(delta, 0f))
+        {
+            return;
+        }
+
+        playerDebt += delta;
+        SyncHostility();
+    }
+
     public void MakeHostile(string reason)
     {
         var kinFaction = KinFaction;
