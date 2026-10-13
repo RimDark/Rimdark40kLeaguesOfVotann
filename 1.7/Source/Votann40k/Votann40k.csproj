@@ -39,28 +39,8 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="VEF">
-            <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+            <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.7\Assemblies\VEF.dll</HintPath>
             <Private>False</Private>
         </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.CoreModule\UnityEngine.CoreModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.IMGUIModule\UnityEngine.IMGUIModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.TextRenderingModule\UnityEngine.TextRenderingModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.InputLegacyModule\UnityEngine.InputLegacyModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.PhysicsModule\UnityEngine.PhysicsModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
-        <ProjectReference Include="..\UnityForwarders\UnityEngine.TilemapModule\UnityEngine.TilemapModule.csproj">
-            <Private>False</Private>
-        </ProjectReference>
     </ItemGroup>
 </Project>
