@@ -7,7 +7,7 @@
 		<li>1.7</li>
 	</supportedVersions>
 	<packageId>Phonicmas.RimDark.Votann</packageId>
-	<modVersion>1.2.4</modVersion>
+	<modVersion>1.2.5</modVersion>
 	<description>RimDark 40k - Leagues of Votann. Adds the Kin xenotype with their cloneskein genes, the Ancestor Core, the Crucible and contracts with offworld Kin.</description>
 	<modDependencies>
 		<li>

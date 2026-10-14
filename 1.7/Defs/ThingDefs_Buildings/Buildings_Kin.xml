@@ -73,6 +73,9 @@
     <label>crucible</label>
     <description>A gestation vat that grows new kin from cloneskein templates. Must be linked to a powered ancestor core to start a kin, and fed nutrition while it grows.</description>
     <thingClass>Votann40k.Building_Crucible</thingClass>
+    <inspectorTabs>
+      <li>ITab_BiosculpterNutritionStorage</li>
+    </inspectorTabs>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
     <graphicData>
